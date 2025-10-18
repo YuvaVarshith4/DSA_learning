@@ -15,3 +15,4 @@ int main() {
 
     return 0;
 }
+// for characters,use char ch ='A' inplace of int num=1 and cout<<ch<<" "; ch++; in place  of num output and increment
