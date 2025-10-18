@@ -1,0 +1,57 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    int a[100][100] = {0};
+    int num = 1;
+
+    int top = 0, bottom = n - 1;
+    int left = 0, right = n - 1;
+
+    while (num <= n * n) {
+        int i = left;
+        while (i <= right && num <= n * n) {
+            a[top][i] = num++;
+            i++;
+        }
+        top++;
+
+        i = top;
+        while (i <= bottom && num <= n * n) {
+            a[i][right] = num++;
+            i++;
+        }
+        right--;
+
+        i = right;
+        while (i >= left && num <= n * n) {
+            a[bottom][i] = num++;
+            i--;
+        }
+        bottom--;
+
+        i = bottom;
+        while (i >= top && num <= n * n) {
+            a[i][left] = num++;
+            i--;
+        }
+        left++;
+    }
+
+    int r = 0;
+    while (r < n) {
+        int c = 0;
+        while (c < n) {
+            cout << setw(4) << a[r][c];
+            c++;
+        }
+        cout << endl;
+        r++;
+    }
+
+    return 0;
+}
