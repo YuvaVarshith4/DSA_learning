@@ -16,3 +16,4 @@ int main() {
 }
 
 //for characters, use this logic: char ch = 'A' or 'a' in outer loop, cout<<ch and ch+=1 
+//uppercase A-Z are 65 to 90, and the values for lowercase a-z are 97 to 122
