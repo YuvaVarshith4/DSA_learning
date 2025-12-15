@@ -6,12 +6,17 @@ int main(){
     int n = sizeof(arr)/sizeof(arr[0]);
     for(int i = 0; i<n; i++){
         bool found = false;
-           for(int j = i+1; j<n; j++){
-            if(arr[j] == arr[i]) {
+           for(int j = 0; j<n; j++){
+            if(i!=j && arr[j] == arr[i]) {
                 found = true; 
+                break;
             }
            }
-        if (found == false) cout<<arr[i]<<endl; 
+        if (found == false) {
+            
+            cout<<arr[i]<<endl; 
+            
+        }
     }
     return 0;
 }
