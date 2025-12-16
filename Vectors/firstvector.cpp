@@ -21,9 +21,9 @@ int main(){
     cout<<vecna.size()<<endl;  //for size
     vecna.push_back('f');   //attach element at the end of the vector
     vecna.pop_back();         //removes/pops the last element of the vector
-    vecna.front();            //outputs the first element of the vector
-    vecna.back();             //output the last element of vector 
-    vecna.at(2);           //returns the value at the 2nd index of the vector
+    cout<<vecna.front()<<endl;            //outputs the first element of the vector
+    cout<<vecna.back()<<endl;             //output the last element of vector 
+    cout<<vecna.at(2)<<endl;           //returns the value at the 2nd index of the vector
     
 /*
 * **Size** is the number of elements currently present in the vector.
